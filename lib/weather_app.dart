@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/hourly_update.dart';
 
 class WeatherApp extends StatelessWidget {
   const WeatherApp({super.key});
@@ -80,6 +81,44 @@ class WeatherApp extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(children: [
+                  HourlyUpate(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  HourlyUpate(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  HourlyUpate(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  HourlyUpate(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  HourlyUpate(),
+                ]),
+              ),
+              const SizedBox(
+                height: 32,
+              ),
+              const Text(
+                "Additional Information",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 16,
               ),
             ],
           ),
