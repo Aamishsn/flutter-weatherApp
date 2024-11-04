@@ -120,18 +120,42 @@ class WeatherApp extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              
-             const Column(
-                children: [
-                  Text(
-                    "Wind",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+              const Column(children: [
+                SizedBox(
+                  width: 150,
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          '03:00',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Icon(
+                          Icons.cloud,
+                          size: 64,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          '320 K',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
                     ),
-                )  
-                ]
-             ),
+                  ),
+                )
+              ]),
             ],
           ),
         ),
