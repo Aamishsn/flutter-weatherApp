@@ -3,39 +3,47 @@ import 'package:flutter/material.dart';
 
 
 class AdditionalInfo extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
+
   const AdditionalInfo({
     super.key,
+    required this.icon,
+    required this.label,
+    required this.value,
+
   });
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return  SizedBox(
       // width: 100,
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Icon(
-              Icons.water_drop,
-              size: 48,
+              icon,
+              size: 42,
             ),
-            SizedBox(
+           const SizedBox(
               height: 10,
             ),
             Text(
-              'Humidity',
-              style: TextStyle(
+              label,
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+         const   SizedBox(
               height: 10,
             ),
             Text(
-              '94',
-              style: TextStyle(
-                fontSize: 24,
+              value,
+              style: const TextStyle(
+                fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             )

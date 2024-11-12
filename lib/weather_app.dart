@@ -124,9 +124,21 @@ class WeatherApp extends StatelessWidget {
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                AdditionalInfo(),
-                AdditionalInfo(),
-                AdditionalInfo(),
+                AdditionalInfo(
+                  icon: Icons.water_drop,
+                  label: 'Humidity',
+                  value: '80%',
+                ),
+                 AdditionalInfo(
+                  icon: Icons.air,
+                  label: 'Wind Speed',
+                  value: '7.5 m/s',
+                ), 
+                AdditionalInfo(
+                  icon: Icons.beach_access_outlined,
+                  label: 'Pressure',
+                  value: '1000 hPa',
+                ),
               ]),
             ],
           ),
